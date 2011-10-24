@@ -1,0 +1,20 @@
+<html>
+<head>
+<title>test Zawgyi to uni</title>
+<script src="zg2uni.js"></script>
+</head>
+<body>
+<textarea rows="10" cols="10" id="sample" style="width:100%;font-size:18px;font-family:Zawgyi-One">သၾကၤန္</textarea>
+<p>
+<input type="button" value="convertme" onclick="convert()">
+</p>
+
+<script>
+function convert(){
+	sample.value=zg2uni(sample.value); 
+	sample.style.fontFamily="Tharlon,Myanmar3";
+
+}
+</script>
+</body>
+</html>
