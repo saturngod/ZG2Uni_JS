@@ -301,8 +301,8 @@ function zg2uni (input)
     unicode[inc]="\u103B\u103E\u1031";
 
     inc++;
-    zawgyi[inc]=/(\u102D|\u102E)\u103D/g;
-    unicode[inc]="\u103D$1";
+    zawgyi[inc]=/(\u102D|\u102E)(\u103D|\u103E)/g;
+    unicode[inc]="$2$1";
 
     inc++;
     zawgyi[inc]=/\u102C\u1039([\u1000-\u1021])/g;
@@ -328,6 +328,8 @@ function zg2uni (input)
     inc++;
     zawgyi[inc]=/\u1092/g;
     unicode[inc]="\u100B\u1039\u100C";
+
+    
 
     inc++;
     zawgyi[inc]=/\u104E/g; //၎င်း
