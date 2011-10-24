@@ -4,15 +4,15 @@
 <script src="zg2uni.js"></script>
 </head>
 <body>
-<textarea rows="10" cols="10" id="sample" style="width:100%;font-size:18px;font-family:Zawgyi-One">သၾကၤန္</textarea>
+<textarea rows="10" cols="10" id="sample" style="width:100%;font-size:18px;font-family:Zawgyi-One">ေဇာ္ဂ်ီနဲ႕ ေရးထားသည့္ စာမ်ားကို ဒီ textarea ထဲတြင္ ထည့္သြင္းျပီး convert ကို ႏိွပ္ပါ။ ယခု version မွာ beta 1 version ျဖစ္ပါသည္။</textarea>
 <p>
-<input type="button" value="convertme" onclick="convert()">
+<input type="button" value="Convert" onclick="convert()">
 </p>
 
 <script>
 function convert(){
 	sample.value=zg2uni(sample.value); 
-	sample.style.fontFamily="Tharlon,Myanmar3";
+	sample.style.fontFamily="Tharlon,Myanmar3,Masterpiece Uni Sans,MyMyanmar";
 
 }
 </script>
