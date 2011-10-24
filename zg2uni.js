@@ -335,6 +335,14 @@ function zg2uni (input)
     zawgyi[inc]=/\u104E/g; //၎င်း
     unicode[inc]="\u104E\u1004\u103A\u1038";
 
+    inc++;
+    zawgyi[inc]=/\u1040(\u102B|\u102C|\u1036)/g;
+    unicode[inc]="\u101D$1";
+
+    inc++;
+    zawgyi[inc]=/\u1025\u1039/g;
+    unicode[inc]="\u1009\u1039"
+
     for(i=0;i<=inc;i++)
     {
         output=output.replace(zawgyi[i],unicode[i]);
