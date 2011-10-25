@@ -209,7 +209,7 @@ function zg2uni (input)
     
 
     //fix ka bar
-    // inc++;
+    inc++;
     zawgyi[inc]=/\u1019\u102C(\u107B|\u1093)/g;
     unicode[inc]="\u1019\u1039\u1018\u102C";
 
