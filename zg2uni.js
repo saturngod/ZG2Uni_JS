@@ -263,9 +263,19 @@ function zg2uni (input)
     zawgyi[inc]=/\u1032\u103D/g;
     unicode[inc]="\u103D\u1032";
 
+
     inc++;
-    zawgyi[inc]=/\u103D\u103B/g;
-    unicode[inc]="\u103B\u103D";
+    zawgyi[inc]=/(\u103B|\u103C|\u103D|\u103E)\u1031(\u103B|\u103D)?/g;
+    unicode[inc]="$2$1\u1031";
+
+    inc++;
+    zawgyi[inc]=/\u1031\u103E/g;
+    unicode[inc]="\u103E\u1031";
+
+
+    inc++;
+    zawgyi[inc]=/\u103D(\u103B|\u103C)/g;
+    unicode[inc]="$1\u103D";
 
     //reorder
     inc++;
