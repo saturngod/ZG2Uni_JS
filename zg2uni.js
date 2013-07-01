@@ -40,12 +40,6 @@ function zg2uni (input)
     var tmp;//for looping tmp value
     var i;
 
-    //convert zero to wa
-
-    inc++;
-    zawgyi[inc]=/(\u1031)?\u1040([\u102B-\u1030]|\u1004\u1039|\u1038)?/g;
-    unicode[inc]="$1\u101D$2";
-
     inc++;
     zawgyi[inc]=/(\u103D|\u1087)/g;
     unicode[inc]="\u103E";
@@ -183,9 +177,7 @@ function zg2uni (input)
     zawgyi[inc]=/([\u1000-\u1021])\u1064/g;
     unicode[inc]="\u1004\u103A\u1039$1";
 
-    inc++;
-    zawgyi[inc]=/([\u1000-\u1021])(\u102F|\u1030)\u1064/g;
-    unicode[inc]="\u1004\u103A\u1039$1$2";
+    
 
     inc++;
     zawgyi[inc]=/([\u1000-\u1021])\u108B/g;
@@ -213,7 +205,7 @@ function zg2uni (input)
 
     inc++;
     zawgyi[inc]=/\u1091/g;
-    unicode[inc]="\u100F\u1039\u100D";
+    unicode[inc]="\u100F\u1039\u1091";
     
 
     //fix ka bar
@@ -229,7 +221,7 @@ function zg2uni (input)
     zawgyi[inc]=/(\u1094|\u1095)/g;
     unicode[inc]="\u1037";
 
-    //1096 ႖ zawgyi in unicod ??? I don't know
+    //1096 á‚– zawgyi in unicod ??? I don't know
     inc++;
     zawgyi[inc]=/\u1096/g;
     unicode[inc]="\u1039\u1010\u103D";
@@ -252,36 +244,30 @@ function zg2uni (input)
     unicode[inc]="$1$2$3\u1031";
 
     inc++;
-    zawgyi[inc]=/([\u1000-\u1021])\u1031(\u103B|\u103C|\u103D|\u103E)/g;
+    zawgyi[inc]=/([\u1000-\u1021])\u1031(\u103B|\u103C|\u103D)/g;
     unicode[inc]="$1$2\u1031";
-
-    inc++;
-    zawgyi[inc]=/\u103D\u1031\u103E/g;
-    unicode[inc]="\u103D\u103E\u1031";
 
     inc++;
     zawgyi[inc]=/\u1032\u103D/g;
     unicode[inc]="\u103D\u1032";
 
-
     inc++;
-    zawgyi[inc]=/(\u103B|\u103C|\u103D|\u103E)\u1031(\u103B|\u103D)?/g;
-    unicode[inc]="$2$1\u1031";
-
-    inc++;
-    zawgyi[inc]=/\u1031\u103E/g;
-    unicode[inc]="\u103E\u1031";
-
-
-    inc++;
-    zawgyi[inc]=/\u103D(\u103B|\u103C)/g;
-    unicode[inc]="$1\u103D";
+    zawgyi[inc]=/\u103D\u103B/g;
+    unicode[inc]="\u103B\u103D";
 
     //reorder
     inc++;
     zawgyi[inc]=/\u103A\u1037/g;
     unicode[inc]="\u1037\u103A";
 
+    inc++;
+    zawgyi[inc]=/\u102F(\u102D|\u102E|\u1036|\u1037)\u102F/g;
+    unicode[inc]="\u102F$1"
+
+    inc++;
+    zawgyi[inc]=/\u102F\u102F/g;
+    unicode[inc]="\u102F"
+    
     inc++;
     zawgyi[inc]=/(\u102F|\u1030)(\u102D|\u102E)/g;
     unicode[inc]="$2$1";
@@ -354,13 +340,18 @@ function zg2uni (input)
     
 
     inc++;
-    zawgyi[inc]=/\u104E/g; //၎င်း
+    zawgyi[inc]=/\u104E/g;
     unicode[inc]="\u104E\u1004\u103A\u1038";
 
+    inc++;
+    zawgyi[inc]=/\u1040(\u102B|\u102C|\u1036)/g;
+    unicode[inc]="\u101D$1";
 
     inc++;
     zawgyi[inc]=/\u1025\u1039/g;
-    unicode[inc]="\u1009\u1039";
+    unicode[inc]="\u1009\u1039"
+
+    
 
     for(i=0;i<=inc;i++)
     {
