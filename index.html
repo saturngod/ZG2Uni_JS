@@ -4,13 +4,13 @@
 <script src="zg2uni.js"></script>
 </head>
 <body>
-<textarea rows="10" cols="10" id="sample" style="width:100%;font-size:18px;font-family:Zawgyi-One">ေဇာ္ဂ်ီနဲ႕ ေရးထားသည့္ စာမ်ားကို ဒီ textarea ထဲတြင္ ထည့္သြင္းျပီး convert ကို ႏိွပ္ပါ။ ယခု version မွာ beta 1 version ျဖစ္ပါသည္။
+<textarea rows="10" cols="10" id="sample" style="width:100%;font-size:18px;font-family:Zawgyi-One">ေဇာ္ဂ်ီနဲ႕ ေရးထားသည့္ စာမ်ားကို ဒီ textarea ထဲတြင္ ထည့္သြင္းျပီး convert ကို ႏိွပ္ပါ။ ယခု version မွာ beta 1 version ျဖစ္ပါသည္။
 
 ေယဓမၼာ ေဟတုပၸဘ၀ါ ေတသံ ေဟတံု တထာဂေတာ အာဟ ေတသဥၥ ေယာနိေရာေဓါ ဧ၀ံ ၀ါဒီ မဟာသမေဏာ။
 
 (ျမန္မာျပန္)
 
-ျမတ္စြာဘုရားရွင္သည္ ေရွးကျပဳခဲ့ဖူးေသာ အေၾကာင္းတရားေၾကာင့္ ျဖစ္ေပၚလာၾကေသာ အက်ိဳးတရားကို ေဟာၾကားေတာ္မူသည္။
+ျမတ္စြာဘုရားရွင္သည္ ေရွးကျပဳခဲ့ဖူးေသာ အေၾကာင္းတရားေၾကာင့္ ျဖစ္ေပၚလာၾကေသာ အက်ိဳးတရားကို ေဟာၾကားေတာ္မူသည္။
 
 ထိုအေၾကာင္းတရားတို႔၏ ခ်ဳပ္ၿငိမ္းရာတရားတို႔ကိုလည္း ေဟာေတာ္မူ၏။
 
@@ -23,9 +23,8 @@
 
 <script>
 function convert(){
-	sample.value=zg2uni(sample.value); 
-	sample.style.fontFamily="Tharlon,Myanmar3,Masterpiece Uni Sans,MyMyanmar";
-
+	document.getElementById('sample').value=zg2uni(document.getElementById('sample').value); 
+	document.getElementById('sample').style.fontFamily="'MON3 Anonta 1',Tharlon,Myanmar3,'Masterpiece Uni Sans',MyMyanmar";
 }
 </script>
 </body>
